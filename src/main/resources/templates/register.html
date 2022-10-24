@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+</head>
+<body>
+
+<div class="container">
+
+
+    <h2 class="title">Risultato</h2>
+
+
+    <table class="parametri">
+<!--            <td th:text="${parametri.parametro()}"></td>&ndash;&gt;-->
+        <tr th:each="parametro : ${parametri}">
+                <td th:text="${parametro.getNome()}"></td>
+                <td th:text='${parametro.getMinore}'></td>
+                <td th:text='${parametro.getMaggiore}'></td>
+        </tr>
+
+
+    </table>
+</div>
+</body>
+</html>
+
+
+
+
+<!--    <form>-->
+
+<!--        <h3 class="mt-5">min: <strong th:text="${parametro_uno}"></strong></h3>-->
+<!--        <h3 class="mt-5">min: <strong th:text="${parametro_due}"></strong></h3>-->
+<!--        <h3 class="mt-5">max: <strong th:text="${parametro_tre}"></strong></h3>-->
+
+<!--</div>-->
+
+<!--<th:block th:each="parametri : ${listaParametri}">-->
+<!--    <tr>-->
+<!--&lt;!&ndash;        <h3 class="mt-5">nome: <strong th:text="${parametro.nome}"></strong></h3>&ndash;&gt;-->
+<!--&lt;!&ndash;        <h3 class="mt-5">nome: <strong th:text="${parametro.minore}"></strong></h3>&ndash;&gt;-->
+<!--        <td th:text="${parametro.maggiore()}"></td>-->
+<!--        <td th:text="${parametro.maggiore()}"></td>-->
+
+<!--    </tr>-->
+<!--</th:block>-->
+
+</form>
+</body>
+</html>
